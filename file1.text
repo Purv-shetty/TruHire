@@ -1,1 +1,17 @@
-updated 
+sudo adduser ansible
+sudo usermod -aG sudo ansible
+sudo su ansible
+ssh-keygen
+ssh-copy-id ansible@127.0.0.1
+(cat /etc/resolv.conf or hostname -i)
+sudo apt update 
+sudo apt install ansible -y
+ansible --version
+sudo mkdir -p /etc/ansible
+sudo nano /etc/ansible/hosts 
+
+[local] 
+localhost ansible_connection=local 
+
+ansible-inventory --list -y
+sudo ansible all -m ping
