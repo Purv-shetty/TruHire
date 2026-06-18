@@ -20,3 +20,6 @@ public class Controller {
        return "This is my first Spring Boot web application.";
    }
 }
+
+netstat -ano|findstr :8080
+taskkill /PID 8492 /F
